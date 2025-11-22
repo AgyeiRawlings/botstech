@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="1.4" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" android:requiredSplitTypes="base__density" android:splitTypes="" package="com.lotto.ghana2" platformBuildVersionCode="34" platformBuildVersionName="14">
+	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<category android:name="android.intent.category.BROWSABLE" />
+			<data android:scheme="https" />
+		</intent>
+		<intent>
+			<action android:name="android.support.customtabs.action.CustomTabsService" />
+		</intent>
+	</queries>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<permission android:name="com.lotto.ghana2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="0x2" />
+	<uses-permission android:name="com.lotto.ghana2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+	<application android:theme="resourceId:0x7f0f0008" android:label="Ghana Lotto Results" android:icon="res/mipmap-xxxhdpi-v4/ic_launcher.png" android:name="com.lotto.ghana2.Utils.MyApplication" android:allowBackup="true" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="res/xml/backup_rules.xml" android:usesCleartextTraffic="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="res/xml/data_extraction_rules.xml">
+		<activity android:name="com.lotto.ghana2.Past.SundayPastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.Past.NationalWeeklyPastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.Past.MondaySpecialPastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.Past.MidWeekPastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.Past.LuckyTuesdayPastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.Past.FridayBonanzaPastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.Past.FortunePastActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.updateActivity" android:exported="false" />
+		<activity android:name="com.lotto.ghana2.SplashActivity" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.lotto.ghana2.MainActivity" android:exported="false" />
+		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-1532884103249300~5432566445" />
+		<activity android:theme="@android:style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="0xfb0" />
+		<provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.lotto.ghana2.mobileadsinitprovider" android:initOrder="100" />
+		<service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false" />
+		<activity android:name="com.google.android.gms.ads.OutOfContextTestingActivity" android:exported="false" android:configChanges="0xfb0" />
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" />
+		<meta-data android:name="com.google.android.gms.version" android:value="12451000" />
+		<provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.lotto.ghana2.androidx-startup">
+			<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup" />
+		</provider>
+		<uses-library android:name="androidx.window.extensions" android:required="false" />
+		<uses-library android:name="androidx.window.sidecar" android:required="false" />
+		<service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="false" android:exported="false" android:directBootAware="false" />
+		<service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="true" android:directBootAware="false" />
+		<service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="true" android:exported="false" android:directBootAware="false" />
+		<receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false" />
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+				<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BATTERY_OKAY" />
+				<action android:name="android.intent.action.BATTERY_LOW" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+				<action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.TIME_SET" />
+				<action android:name="android.intent.action.TIMEZONE_CHANGED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+			<intent-filter>
+				<action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+			</intent-filter>
+		</receiver>
+		<service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true" />
+		<activity android:theme="resourceId:0x7f0f023f" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true" />
+		<meta-data android:name="com.android.vending.splits.required" android:value="true" />
+		<meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store" />
+		<meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK" />
+		<meta-data android:name="com.android.vending.splits" android:resource="res/xml/splits0.xml" />
+		<meta-data android:name="com.android.vending.derived.apk.id" android:value="2" />
+	</application>
+</manifest>

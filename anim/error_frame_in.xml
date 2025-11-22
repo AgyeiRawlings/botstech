@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sweet="http://schemas.android.com/apk/res-auto" android:interpolator="resourceId:0x10a000b" android:shareInterpolator="true">
+	<alpha android:duration="400" android:fromAlpha="{4:0}" android:toAlpha="{4:1065353216}" />
+	<sweet:cn.pedant.SweetAlert.Rotate3dAnimation android:duration="400" sweet:customPivotX="1.5046333E-36%" sweet:customPivotY="1.5046333E-36%" sweet:fromDeg="{4:1120403456}" sweet:rollType="0" sweet:toDeg="{4:0}" />
+</set>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android" android:interpolator="resourceId:0x10a0005" android:duration="300" android:fromDegrees="{4:3258187776}" android:toDegrees="{4:3284828160}" android:pivotX="0.0%" android:pivotY="1.5046333E-36%" android:fillAfter="true" android:startOffset="215" />
